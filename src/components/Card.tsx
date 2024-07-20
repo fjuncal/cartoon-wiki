@@ -1,4 +1,4 @@
-import { IconeFogo, IconeRaio, IconeFoguete } from "@/icons";
+import { IconeFogo, IconeRaio, IconeFoguete } from "../icons/index";
 import { Cartoon } from "@/models/Cartoon";
 import { useEffect, useState } from "react";
 
