@@ -65,21 +65,15 @@ export default function Card() {
                         Piccolo went off to train by himself. */}
                       </p>
                       <div className="w-full flex justify-center pt-5 pb-5 ">
-                        <a href="javascript:void(0)" className="mx-5">
-                          <div aria-label="Fogo" role="img">
-                            {IconeFogo}
-                          </div>
-                        </a>
-                        <a href="javascript:void(0)" className="mx-5">
-                          <div aria-label="Raio" role="img">
-                            {IconeRaio}
-                          </div>
-                        </a>
-                        <a href="javascript:void(0)" className="mx-5">
-                          <div aria-label="Foguete" role="img">
-                            {IconeFoguete}
-                          </div>
-                        </a>
+                        <div aria-label="Fogo" role="img" className="mx-5">
+                          {IconeFogo}
+                        </div>
+                        <div className="mx-5" aria-label="Raio" role="img">
+                          {IconeRaio}
+                        </div>
+                        <div className="mx-5" aria-label="Foguete" role="img">
+                          {IconeFoguete}
+                        </div>
                       </div>
                     </div>
                   </div>
