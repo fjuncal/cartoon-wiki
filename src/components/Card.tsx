@@ -1,15 +1,31 @@
 import { IconeFogo, IconeRaio, IconeFoguete } from "../icons";
 import { Cartoon } from "@/models/Cartoon";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 const BASE_URL = "https://cartoon-wiki-api.onrender.com/cartoon/";
 export default function Card() {
+  const router = useRouter();
+
   const [cartoons, setCartoons] = useState<Cartoon[] | null>(null);
   async function obterCartoons() {
     const response = await fetch(BASE_URL);
     const data = await response.json();
     const dataCartoons = Cartoon.fromJson(data);
     setCartoons(dataCartoons);
+  }
+
+  function detalhesCartoon(cartoon: Cartoon) {
+    const { nome, descricao, foto } = cartoon;
+    router.push({
+      pathname: "/detalhes",
+      query: {
+        nome,
+        descricao,
+        foto,
+      },
+    });
   }
 
   useEffect(() => {
@@ -38,10 +54,14 @@ export default function Card() {
             >
               {cartoons?.map((cartoon) => (
                 <div
+                  key={cartoon?.id}
                   role="listitem"
                   className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5 px-2 "
                 >
-                  <div className="rounded-3xl overflow-hidden shadow-md bg-gray-200 hover:bg-gray-600 hover:shadow-black hover:cursor-pointer">
+                  <div
+                    onClick={() => detalhesCartoon(cartoon)}
+                    className="rounded-3xl overflow-hidden shadow-md bg-gray-200 hover:bg-gray-600 hover:shadow-black hover:cursor-pointer"
+                  >
                     <div className="absolute -mt-20 w-full flex justify-center ">
                       <div className="h-32 w-34">
                         <img
