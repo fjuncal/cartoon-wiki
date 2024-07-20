@@ -65,13 +65,17 @@ export default function Card() {
                         Piccolo went off to train by himself. */}
                       </p>
                       <div className="w-full flex justify-center pt-5 pb-5">
-                        <div aria-label="Fogo" role="img" className="mx-5">
+                        <div aria-label="Fogo" role="img" className="mx-5 w-8">
                           {IconeFogo}
                         </div>
-                        <div className="mx-5" aria-label="Raio" role="img">
+                        <div className="mx-5 w-8" aria-label="Raio" role="img">
                           {IconeRaio}
                         </div>
-                        <div className="mx-5" aria-label="Foguete" role="img">
+                        <div
+                          className="mx-5 w-8"
+                          aria-label="Foguete"
+                          role="img"
+                        >
                           {IconeFoguete}
                         </div>
                       </div>
