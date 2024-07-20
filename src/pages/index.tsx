@@ -1,9 +1,9 @@
 import Card from "@/components/Card";
+import Teste from "@/components/Teste";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Cartoon Wiki</h1>
+    <div className="  bg-gray-900  h-screen w-screen">
       <Card />
     </div>
   );
