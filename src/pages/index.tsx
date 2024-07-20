@@ -1,5 +1,4 @@
 import Card from "@/components/Card";
-import Teste from "@/components/Teste";
 
 export default function Home() {
   return (
