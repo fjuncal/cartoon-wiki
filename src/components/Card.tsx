@@ -1,4 +1,4 @@
-import { IconeFogo, IconeRaio, IconeFoguete } from "../icons/index";
+import { IconeFogo, IconeRaio, IconeFoguete } from "../icons";
 import { Cartoon } from "@/models/Cartoon";
 import { useEffect, useState } from "react";
 
@@ -30,11 +30,11 @@ export default function Card() {
           </div>
         </div>
         <div className="w-full px-10 pt-10 ">
-          <div className=" mx-auto ">
+          <div className=" mx-auto  ">
             <div
               role="list"
               aria-label="Behind the scenes People "
-              className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around "
+              className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around  "
             >
               {cartoons?.map((cartoon) => (
                 <div
@@ -43,7 +43,7 @@ export default function Card() {
                 >
                   <div className="rounded-3xl overflow-hidden shadow-md bg-gray-200 hover:bg-gray-600 hover:shadow-black hover:cursor-pointer">
                     <div className="absolute -mt-20 w-full flex justify-center ">
-                      <div className="h-32 w-32">
+                      <div className="h-32 w-34">
                         <img
                           src={cartoon.foto}
                           alt={cartoon.nome}
@@ -64,7 +64,7 @@ export default function Card() {
                         Son Goku in the 23rd World Martial Arts Tournament,
                         Piccolo went off to train by himself. */}
                       </p>
-                      <div className="w-full flex justify-center pt-5 pb-5 ">
+                      <div className="w-full flex justify-center pt-5 pb-5">
                         <div aria-label="Fogo" role="img" className="mx-5">
                           {IconeFogo}
                         </div>
