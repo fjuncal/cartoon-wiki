@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IconeFogo, IconeRaio, IconeFoguete } from "../icons";
 
 interface CartoonDetalhesProps {
@@ -15,7 +16,7 @@ export default function CartoonDetalhes(props: CartoonDetalhesProps) {
           style={{ width: 720, height: 600 }}
         >
           <div className="w-72">
-            <h1 className="text-4xl font-bold text-center mb-8">
+            <h1 className="text-4xl font-bold text-center mb-4">
               {props.nome}
             </h1>
             <small className="text-gray-300 text-lg">{props.descricao}</small>
@@ -29,6 +30,16 @@ export default function CartoonDetalhes(props: CartoonDetalhesProps) {
               <div aria-label="Foguete" role="img" className="mx-5 w-8">
                 {IconeFoguete}
               </div>
+            </div>
+            <div className="flex justify-center">
+              <Link href={"/"}>
+                <button
+                  className="uppercase mb-2 font-bold transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                  type="button"
+                >
+                  Voltar
+                </button>
+              </Link>
             </div>
           </div>
         </div>
