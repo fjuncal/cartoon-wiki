@@ -1,4 +1,5 @@
 import CartoonDetalhes from "@/components/CartoonDetalhes";
+import Skeleton from "@/components/Skeleton";
 import { useRouter } from "next/router";
 
 export default function detalhes() {
@@ -22,11 +23,15 @@ export default function detalhes() {
 
   return (
     <div className=" ">
-      <CartoonDetalhes
-        nome={nomeRouter as string}
-        descricao={descricaoRouter as string}
-        foto={fotoRouter as string}
-      />
+      {router ? (
+        <CartoonDetalhes
+          nome={nomeRouter as string}
+          descricao={descricaoRouter as string}
+          foto={fotoRouter as string}
+        />
+      ) : (
+        <Skeleton />
+      )}
     </div>
   );
 }
