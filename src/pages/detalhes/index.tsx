@@ -1,6 +1,5 @@
 import CartoonDetalhes from "@/components/CartoonDetalhes";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
 export default function detalhes() {
   // const [nome, setNome] = useState<string>();
@@ -22,7 +21,7 @@ export default function detalhes() {
   // console.log(foto);
 
   return (
-    <div className=" h-screen w-screen bg-gray-900 ">
+    <div className=" ">
       <CartoonDetalhes
         nome={nomeRouter as string}
         descricao={descricaoRouter as string}
