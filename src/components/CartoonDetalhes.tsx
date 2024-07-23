@@ -1,3 +1,5 @@
+import { IconeFogo, IconeRaio, IconeFoguete } from "../icons";
+
 interface CartoonDetalhesProps {
   foto: string;
   nome: string;
@@ -13,8 +15,21 @@ export default function CartoonDetalhes(props: CartoonDetalhesProps) {
           style={{ width: 720, height: 600 }}
         >
           <div className="w-72">
-            <h1 className="text-4xl font-bold">{props.nome}</h1>
+            <h1 className="text-4xl font-bold text-center mb-8">
+              {props.nome}
+            </h1>
             <small className="text-gray-300 text-lg">{props.descricao}</small>
+            <div className="w-full flex justify-center pt-5 pb-5">
+              <div aria-label="Fogo" role="img" className="mx-5 w-8">
+                {IconeFogo}
+              </div>
+              <div aria-label="Raio" role="img" className="mx-5 w-8">
+                {IconeRaio}
+              </div>
+              <div aria-label="Foguete" role="img" className="mx-5 w-8">
+                {IconeFoguete}
+              </div>
+            </div>
           </div>
         </div>
 
