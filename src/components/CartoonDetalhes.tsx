@@ -20,7 +20,7 @@ export default function CartoonDetalhes(props: CartoonDetalhesProps) {
 
         <div
           className="flex flex-wrap content-center justify-center rounded-r-md"
-          style={{ width: 680, height: 600 }}
+          style={{ width: 620, height: 600 }}
         >
           <img
             className="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md"
