@@ -6,8 +6,8 @@ interface CartoonDetalhesProps {
 
 export default function CartoonDetalhes(props: CartoonDetalhesProps) {
   return (
-    <div className="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-900 py-10">
-      <div className="flex shadow-md">
+    <div className="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-900 py-10 ">
+      <div className="flex shadow-md rounded-3xl overflow-hidden bg-gray-900 shadow-black">
         <div
           className="flex flex-wrap content-center justify-center rounded-l-md bg-gray-600 p-10"
           style={{ width: 720, height: 600 }}
